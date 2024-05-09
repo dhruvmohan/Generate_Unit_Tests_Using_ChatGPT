@@ -1,0 +1,3 @@
+node index.js /Users/dhruvmohan/Downloads/GenerateUnitTests_ChatGPT/addNumbers.js
+
+npm run testjest

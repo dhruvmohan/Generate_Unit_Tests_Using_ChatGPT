@@ -1,0 +1,48 @@
+
+
+module.exports = addNumbers; // Export the function for testing
+
+
+
+
+
+### Step 4: Write Test Cases
+
+Now, create a test file named `addNumbers.test.js` in the same directory or in a test-specific directory, like `__tests__`.
+
+```javascript
+// addNumbers.test.js
+
+const addNumbers = require('./addNumbers'); // Import the function
+
+// Test suite for addNumbers
+describe('addNumbers', () => {
+    // Test case 1: Adding positive numbers
+    test('adds 1 + 2 to equal 3', () => {
+        expect(addNumbers(1, 2)).toBe(3);
+    });
+
+    // Test case 2: Adding negative numbers
+    test('adds -1 + -2 to equal -3', () => {
+        expect(addNumbers(-1, -2)).toBe(-3);
+    });
+
+    // Test case 3: Adding a number to zero
+    test('adds 5 + 0 to equal 5', () => {
+        expect(addNumbers(5, 0)).toBe(5);
+    });
+
+    // Test case 4: Adding zero to zero
+    test('adds 0 + 0 to equal 0', () => {
+        expect(addNumbers(0, 0)).toBe(0);
+    });
+
+    // Test case 5: Adding floating point numbers
+    test('adds 1.5 + 2.3 to equal 3.8', () => {
+        expect(addNumbers(1.5, 2.3)).toBeCloseTo(3.8);
+    });
+});
+```
+
+
+// Jest will automatically find files with `.test.js` or `.spec.js` suffixes and run the tests within them. The output will tell you which tests passed and which failed, along with any error messages for failures, allowing you to ensure your `addNumbers` function works as expected across different scenarios.
